@@ -5,6 +5,8 @@ import 'package:ui_kit/ui_component/button/big_button.dart';
 import 'package:ui_kit/ui_component/button/cart_button.dart';
 import 'package:ui_kit/ui_component/button/chips_button.dart';
 import 'package:ui_kit/ui_component/button/small_button.dart';
+import 'package:ui_kit/ui_component/card/card.dart';
+import 'package:ui_kit/ui_component/card/card_background.dart';
 import 'package:ui_kit/ui_component/controller/counter.dart';
 import 'package:ui_kit/ui_component/controller/toggle.dart';
 
@@ -18,6 +20,8 @@ class UiKit {
   ChipsButton get chipsButton => ChipsButton();
   CartButton get cardButton => CartButton();
   Counter get counter => Counter();
+  CardBackground get cardBackground => CardBackground();
+  Card get card => Card();
 }
 
 final ui = UiKit();

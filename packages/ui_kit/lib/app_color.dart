@@ -14,6 +14,8 @@ abstract class AppColor {
   static const description = Color(0xFF7E7E9A);
   static const cardStroke = Color(0xFFF4F4F4);
 
+  static const divider = Color(0xFFF4F4F4);
+
   // static const caption = Color(0xFF939396);
   // static const inputBg2 = Color(0xFFF5F5F9);
   // static const inputStroke2 = Color(0xFFEBEBEB);
