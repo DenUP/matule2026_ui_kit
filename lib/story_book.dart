@@ -146,7 +146,7 @@ class _StoryBookState extends State<StoryBook> {
                     SizedBox(height: 20),
                     AppInput(isPassword: true, value: 'Введите имя'),
                     SizedBox(height: 20),
-                    AppInput(hintText: '--.--.----', isDate: true),
+                    AppInput(hintText: '--.--.----', ),
                     SizedBox(height: 20),
                   ],
                 ),

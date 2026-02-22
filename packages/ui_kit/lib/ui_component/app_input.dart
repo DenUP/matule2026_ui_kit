@@ -8,7 +8,6 @@ class AppInput extends StatefulWidget {
   final String? labelText;
   final bool isError;
   final bool isPassword;
-  final bool isDate;
   final String? helpText;
 
   const AppInput({
@@ -19,7 +18,6 @@ class AppInput extends StatefulWidget {
     this.isError = false,
     this.isPassword = false,
     this.helpText,
-    this.isDate = false,
   });
 
   @override
@@ -59,10 +57,7 @@ class _AppInputState extends State<AppInput> {
                 _isAcitve = value;
               }),
               child: TextFormField(
-                inputFormatters: widget.isDate
-                    ? [FilteringTextInputFormatter.digitsOnly]
-                    : null,
-                keyboardType: widget.isDate ? TextInputType.number : null,
+               
                 controller: _controller,
 
                 obscureText: widget.isPassword && !_showPassword,
