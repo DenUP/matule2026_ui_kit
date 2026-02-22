@@ -10,32 +10,46 @@ class AppInputDate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      onTap: () async {
-        final data = await showDatePicker(
-          context: context,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Дата',
+          style: AppTextstyle.captionRegular.copyWith(
+            color: AppColor.description,
+          ),
+        ),
+        SizedBox(height: 4),
+        TextFormField(
+          onTap: () async {
+            final data = await showDatePicker(
+              context: context,
 
-          firstDate: DateTime(1900),
-          lastDate: DateTime.now(),
-          initialDate: value ?? DateTime.now(),
-        );
-        if (data != null) {
-          return onChanges?.call(data);
-        }
-      },
-      readOnly: true,
-      controller: TextEditingController(text: value?.toddMMyyyy()),
-      style: AppTextstyle.textRegular.copyWith(color: AppColor.black),
-      decoration: InputDecoration(
-        hintStyle: AppTextstyle.textRegular.copyWith(color: AppColor.caption),
-        hintText: '--.--.----',
-        contentPadding: EdgeInsets.all(14),
-        filled: true,
-        fillColor: AppColor.inputBg,
-        border: _border(),
-        enabledBorder: _border(),
-        focusedBorder: _border(),
-      ),
+              firstDate: DateTime(1900),
+              lastDate: DateTime.now(),
+              initialDate: value ?? DateTime.now(),
+            );
+            if (data != null) {
+              return onChanges?.call(data);
+            }
+          },
+          readOnly: true,
+          controller: TextEditingController(text: value?.toddMMyyyy()),
+          style: AppTextstyle.textRegular.copyWith(color: AppColor.black),
+          decoration: InputDecoration(
+            hintStyle: AppTextstyle.textRegular.copyWith(
+              color: AppColor.caption,
+            ),
+            hintText: '--.--.----',
+            contentPadding: EdgeInsets.all(14),
+            filled: true,
+            fillColor: AppColor.inputBg,
+            border: _border(),
+            enabledBorder: _border(),
+            focusedBorder: _border(),
+          ),
+        ),
+      ],
     );
   }
 
