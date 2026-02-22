@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/ui_component/app_input.dart';
+import 'package:ui_kit/ui_component/app_input_date.dart';
+import 'package:ui_kit/ui_component/app_input_image.dart';
+import 'package:ui_kit/ui_component/controller/counter.dart';
+import 'package:ui_kit/ui_component/controller/toggle.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 class StoryBook extends StatefulWidget {
@@ -50,8 +54,8 @@ class _StoryBookState extends State<StoryBook> {
                   _color("Success", AppColor.success),
                   _color("Инпут бг", AppColor.inputBg),
                   _color("Инпут строк", AppColor.inputStroke),
-                  _color("Инпут иконки", AppColor.inputIcon),
-                  _color("Плейсхолдер", AppColor.placeholder),
+                  _color("Инпут иконки", AppColor.icons),
+                  _color("Плейсхолдер", AppColor.description),
                   _color("Дескрипшн", AppColor.description),
                   _color("Кард строк", AppColor.cardStroke),
                 ],
@@ -146,8 +150,25 @@ class _StoryBookState extends State<StoryBook> {
                     SizedBox(height: 20),
                     AppInput(isPassword: true, value: 'Введите имя'),
                     SizedBox(height: 20),
-                    AppInput(hintText: '--.--.----', ),
+                    AppInput(hintText: '--.--.----'),
                     SizedBox(height: 20),
+                    AppInputDate(
+                      value: _selectedDate,
+                      onChanges: (value) => setState(() {
+                        _selectedDate = value;
+                        print(_selectedDate);
+                      }),
+                    ),
+                    SizedBox(height: 20),
+                    AppInputImage(),
+                    SizedBox(height: 20),
+                    ui.counter.noActive(),
+                    SizedBox(height: 10),
+                    ui.counter.active(),
+                    SizedBox(height: 20),
+                    Toggle(isActive: false),
+                    SizedBox(height: 20),
+                    Toggle(isActive: true),
                   ],
                 ),
               ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:matule2026/story_book.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(App());
 }
 

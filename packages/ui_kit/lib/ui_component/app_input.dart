@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 class AppInput extends StatefulWidget {
@@ -44,7 +43,7 @@ class _AppInputState extends State<AppInput> {
           Text(
             widget.labelText!,
             style: AppTextstyle.captionRegular.copyWith(
-              color: AppColor.description2,
+              color: AppColor.description,
             ),
           ),
           SizedBox(height: 8),
@@ -57,15 +56,12 @@ class _AppInputState extends State<AppInput> {
                 _isAcitve = value;
               }),
               child: TextFormField(
-               
                 controller: _controller,
 
                 obscureText: widget.isPassword && !_showPassword,
                 obscuringCharacter: '*',
 
-                style: AppTextstyle.textRegular.copyWith(
-                  color: AppColor.black2,
-                ),
+                style: AppTextstyle.textRegular.copyWith(color: AppColor.black),
                 decoration: InputDecoration(
                   suffixIcon: widget.isPassword
                       ? IconButton(
@@ -75,8 +71,8 @@ class _AppInputState extends State<AppInput> {
                             });
                           },
                           icon: _showPassword
-                              ? AppIcon.eyeOff(color: AppColor.black2)
-                              : AppIcon.eyeOnn(color: AppColor.black2),
+                              ? AppIcon.eyeOff(color: AppColor.icons)
+                              : AppIcon.eyeOnn(color: AppColor.icons),
                         )
                       : null,
                   hintStyle: AppTextstyle.textRegular.copyWith(
@@ -87,7 +83,7 @@ class _AppInputState extends State<AppInput> {
                   filled: true,
                   fillColor: widget.isError
                       ? Color(0x1AFD3535)
-                      : AppColor.inputBg2,
+                      : AppColor.inputBg,
                   border: _border(),
                   enabledBorder: _border(),
                   focusedBorder: _border(),
@@ -122,6 +118,6 @@ class _AppInputState extends State<AppInput> {
     if (widget.isError) {
       return AppColor.error;
     }
-    return AppColor.inputStroke2;
+    return AppColor.inputBg;
   }
 }

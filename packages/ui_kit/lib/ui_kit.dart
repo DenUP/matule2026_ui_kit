@@ -1,8 +1,12 @@
 import 'package:ui_kit/ui_component/app_input.dart';
+import 'package:ui_kit/ui_component/app_input_date.dart';
+import 'package:ui_kit/ui_component/app_input_image.dart';
 import 'package:ui_kit/ui_component/button/big_button.dart';
 import 'package:ui_kit/ui_component/button/cart_button.dart';
 import 'package:ui_kit/ui_component/button/chips_button.dart';
 import 'package:ui_kit/ui_component/button/small_button.dart';
+import 'package:ui_kit/ui_component/controller/counter.dart';
+import 'package:ui_kit/ui_component/controller/toggle.dart';
 
 export 'app_textstyle.dart';
 export 'app_icon.dart';
@@ -13,6 +17,7 @@ class UiKit {
   SmallButton get smallButton => SmallButton();
   ChipsButton get chipsButton => ChipsButton();
   CartButton get cardButton => CartButton();
+  Counter get counter => Counter();
 }
 
 final ui = UiKit();
