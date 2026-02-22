@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:ui_kit/ui_component/app_input.dart';
 import 'package:ui_kit/ui_kit.dart';
 
-class StoryBook extends StatelessWidget {
+class StoryBook extends StatefulWidget {
   const StoryBook({super.key});
 
+  @override
+  State<StoryBook> createState() => _StoryBookState();
+}
+
+DateTime? _selectedDate;
+
+class _StoryBookState extends State<StoryBook> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,6 +120,38 @@ class StoryBook extends StatelessWidget {
 
               SizedBox(height: 5),
               ui.chipsButton.unAccent(title: "Популярные", onTap: () {}),
+              // Cart Button
+              SizedBox(height: 20),
+              ui.cardButton.accent(price: 500, onTap: () {}),
+              SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  children: [
+                    AppInput(hintText: 'Введите имя'),
+                    SizedBox(height: 20),
+                    AppInput(value: 'Иван'),
+                    SizedBox(height: 20),
+                    AppInput(labelText: 'Имя', hintText: 'Введите имя'),
+                    SizedBox(height: 20),
+                    AppInput(
+                      hintText: 'Имя',
+                      isError: true,
+                      helpText: 'Введите ваше имя',
+                    ),
+                    SizedBox(height: 20),
+                    AppInput(labelText: 'Имя', hintText: 'Введите имя'),
+                    SizedBox(height: 20),
+                    AppInput(labelText: 'Имя', value: 'Введите имя'),
+                    SizedBox(height: 20),
+                    AppInput(isPassword: true, value: 'Введите имя'),
+                    SizedBox(height: 20),
+                    AppInput(hintText: '--.--.----', isDate: true),
+                    SizedBox(height: 20),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
             ],
           ),
         ),

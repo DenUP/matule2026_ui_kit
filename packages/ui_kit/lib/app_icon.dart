@@ -49,9 +49,10 @@ abstract class AppIcon {
 
 SvgPicture _icon(String name, {double? size, Color? color}) {
   return SvgPicture.asset(
-    "packages/ui_kit/assets/icon/$name.svg",
+    "assets/icon/$name.svg",
     width: size,
     height: size,
+    package: 'ui_kit',
     colorFilter: color != null
         ? ColorFilter.mode(color, BlendMode.srcATop)
         : null,
