@@ -1,6 +1,7 @@
 import 'package:ui_kit/ui_component/app_input.dart';
 import 'package:ui_kit/ui_component/app_input_date.dart';
 import 'package:ui_kit/ui_component/app_input_image.dart';
+import 'package:ui_kit/ui_component/app_pincode.dart';
 import 'package:ui_kit/ui_component/button/big_button.dart';
 import 'package:ui_kit/ui_component/button/cart_button.dart';
 import 'package:ui_kit/ui_component/button/chips_button.dart';
@@ -22,6 +23,7 @@ class UiKit {
   Counter get counter => Counter();
   CardBackground get cardBackground => CardBackground();
   Card get card => Card();
+  AppPincode get apiPincode => AppPincode();
 }
 
 final ui = UiKit();

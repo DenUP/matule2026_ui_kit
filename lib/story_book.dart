@@ -162,6 +162,18 @@ class _StoryBookState extends State<StoryBook> {
                     SizedBox(height: 20),
                     AppInputImage(),
                     SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ui.apiPincode.create(onChanged: (value) => {}),
+                        SizedBox(width: 14),
+                        ui.apiPincode.create(
+                          onChanged: (value) => {},
+                          number: "1",
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
                     ui.counter.noActive(),
                     SizedBox(height: 10),
                     ui.counter.active(),
