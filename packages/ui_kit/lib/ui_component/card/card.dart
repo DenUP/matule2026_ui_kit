@@ -50,4 +50,50 @@ class Card {
       ),
     );
   }
+
+  Widget cart({
+    required String title,
+    required String price,
+    required String count,
+    required VoidCallback close,
+    required Widget button,
+  }) {
+    return ui.cardBackground.base(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  title,
+                  style: AppTextstyle.headlineMedium.copyWith(
+                    color: AppColor.black,
+                  ),
+                ),
+              ),
+              SizedBox(width: 8),
+              IconButton(onPressed: close, icon: AppIcon.close()),
+            ],
+          ),
+          Spacer(),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  '$price ₽',
+                  style: AppTextstyle.title3Medium.copyWith(
+                    color: AppColor.black,
+                  ),
+                ),
+              ),
+              Text('$count  штук'),
+              SizedBox(width: 42),
+              button,
+            ],
+          ),
+        ],
+      ),
+    );
+  }
 }
