@@ -1,5 +1,6 @@
 import 'package:ui_kit/ui_component/app_input.dart';
 import 'package:ui_kit/ui_component/app_input_date.dart';
+import 'package:ui_kit/ui_component/app_input_gender.dart';
 import 'package:ui_kit/ui_component/app_input_image.dart';
 import 'package:ui_kit/ui_component/app_pincode.dart';
 import 'package:ui_kit/ui_component/button/big_button.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/ui_component/app_input.dart';
 import 'package:ui_kit/ui_component/app_input_date.dart';
+import 'package:ui_kit/ui_component/app_input_gender.dart';
 import 'package:ui_kit/ui_component/app_input_image.dart';
 import 'package:ui_kit/ui_component/controller/counter.dart';
 import 'package:ui_kit/ui_component/controller/toggle.dart';
@@ -14,6 +15,7 @@ class StoryBook extends StatefulWidget {
 }
 
 DateTime? _selectedDate;
+Gender? _gender;
 
 class _StoryBookState extends State<StoryBook> {
   @override
@@ -157,6 +159,13 @@ class _StoryBookState extends State<StoryBook> {
                       onChanges: (value) => setState(() {
                         _selectedDate = value;
                         print(_selectedDate);
+                      }),
+                    ),
+                    SizedBox(height: 20),
+                    AppInputGender(
+                      value: _gender,
+                      onChanges: (value) => setState(() {
+                        _gender = value;
                       }),
                     ),
                     SizedBox(height: 20),
